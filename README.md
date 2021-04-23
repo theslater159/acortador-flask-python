@@ -1,7 +1,7 @@
 # Acortador
 
 ## Comenzando 🚀
- _Este codigo esta creado lenguaje python usando flask, es un acortador de urls 
+ _Este codigo esta creado lenguaje python usando flask, un acortador de urls 
 ### Instalación 🔧
 _lo primero que debemos hacer es instalar los requerimientos usando el comando ......
 ```
