@@ -17,9 +17,9 @@ y ahi se encuentra el sql para importar la base de datos
 
 * brs1996201@gmail.com
 * 123456
-* 
+
 * brs1996202@gmail.com
 * 1234567
-* 
+
 
 
