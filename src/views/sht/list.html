@@ -1,0 +1,96 @@
+{% extends 'layouts/home.html' %} {% block tittle %} List Urls{% endblock %} {% block contents %}
+<nav class="navbar navbar-expand navbar-pink bg-pink">
+    <div class="container-fluid" style="background-color: #ffffff">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a style="background-color: #ffffff; color: black; font-size: 20px" class="nav-link active"
+                        href="{{url_for('index')}}">Home</a>
+                </li>
+                <li class="nav-item">
+                        <a style="background-color: #ffffff; color: black; font-size: 20px" class="nav-link active"
+                            aria-current="page" href="{{url_for('users')}}">Usuarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="background-color: #ffffff; color: black;font-size: 20px" class="nav-link active"
+                            href="{{url_for('listUrls')}}">Urls</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="background-color: #ffffff; color: black; font-size: 20px" class="nav-link active"
+                            href="{{url_for('login')}}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="background-color: #ffffff; color: black; font-size: 20px" class="nav-link active"
+                            href="{{url_for('logout')}}">Log Out</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br>
+<h1 class="display-4" align="center">Listado Urls</h1>
+<br>
+<form align="center" action="{{ url_for('listUrls') }}" method="GET">
+    <table class="table table-responsive table-bordered" style="background-color: whitesmoke" id="urls"
+        cellspacing="10px">
+        <thead>
+            <tr>
+                <th scope="col">Url acortado</th>
+                <th scope="col">Url origen</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for u in urls %}
+            <tr>
+                <td>{{ u.0 }}</td>
+                <td>{{ u.1 }}</td>
+                
+</form>
+
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</form>
+
+{% endblock %}
+
+{% block login_css %}
+
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+
+    .navbar .nav-item-l:not(:last-child) {
+
+        margin-right: 20px;
+
+    }
+
+    .navbar .nav-item-m:not(:last-child) {
+
+        margin-right: 20px;
+
+    }
+
+    .navbar .nav-item-n:not(:last-child) {
+
+        margin-left: 790px;
+        margin-right: 18px;
+
+    }
+
+    body {
+
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+
+        font-family: 'Vibur', cursive;
+       
+        font-family: 'Abel', sans-serif;
+        opacity: .95;
+      
+    }
+</style>
+
+{% endblock %}

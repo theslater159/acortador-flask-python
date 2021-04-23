@@ -1,0 +1,86 @@
+{% extends 'layouts/home.html' %} {% block tittle %} Shorten {% endblock %} {% block contents %}
+
+<nav class="navbar navbar-expand navbar-pink bg-pink " >
+    <div class="container-fluid"  style="background-color: #ffffff">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a style="background-color: #ffffff; color: black; font-size: 20px" class="nav-link active"
+                        aria-current="page" href="{{url_for('users')}}">Usuarios</a>
+                </li>
+                <li class="nav-item">
+                    <a style="background-color: #ffffff; color: black;font-size: 20px" class="nav-link active"
+                        href="{{url_for('listUrls')}}">Urls</a>
+                </li>
+                <li class="nav-item">
+                    <a style="background-color: #ffffff; color: black; font-size: 20px" class="nav-link active"
+                        href="{{url_for('login')}}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a style="background-color: #ffffff; color: black; font-size: 20px" class="nav-link active"
+                        href="{{url_for('logout')}}">Log Out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<h1 class="display-1" align="center">ACORTADOR</h1>
+<br>
+
+<br>
+<br>
+<br>
+<div class="container" style=" width: max-content" align="center">
+    <form class="row gx-1 align-items-center" action="{{ url_for('createURL') }}" method="POST">
+        <div class="col-sm-10">
+            <input style="width: 450px"  type="text" class="form-control" align="center" name="url"
+                placeholder="Add the url">
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-outline-light"
+                style="background-color: #0f0bf3fa; font-size: 20px; color: #ffffff">
+                Acortar
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+{% block login_css %}
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+
+    .navbar .nav-item-l:not(:last-child) {
+
+        margin-right: 20px;
+
+    }
+
+    .navbar .nav-item-m:not(:last-child) {
+
+        margin-right: 20px;
+
+    }
+
+    .navbar .nav-item-n:not(:last-child) {
+
+        margin-left: 790px;
+        margin-right: 18px;
+
+    }
+
+
+
+    body {
+
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        font-family: 'Vibur', cursive;
+        font-family: 'Abel', sans-serif;
+        opacity: .95;
+       
+    }
+</style>
+
+{% endblock %}
