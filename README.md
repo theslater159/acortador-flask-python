@@ -10,9 +10,7 @@ _lo primero que debemos hacer es instalar los requerimientos usando el comando .
 
 luego se va a la ruta src/sql 
 y ahi se encuentra el sql para importar la base de datos
-```
 
-```
 ### Usuarios Admin
 
 * brs1996201@gmail.com
